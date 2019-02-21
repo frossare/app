@@ -1,0 +1,811 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+html
+	scroll-behavior: smooth
+
+body
+	margin: 0 0 0 0
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	//line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.blue_font_color
+	color: $main_blue
+
+h1 ::before
+	background-color: red
+
+.preloader
+	display: flex
+	position: fixed
+	justify-content: center
+	align-items: center
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	z-index: 200
+	background-color: $font_black
+.dis_none
+	display: none
+.sidebar
+	width: 150px
+	height: 100%
+	position: fixed
+	display: flex
+	flex-direction: column
+	z-index: 5
+	.sidebar_top
+		background-color: $background_black
+		min-height: 50%
+		display: flex
+		flex-direction: column
+		align-items: center
+	
+		.studio_name
+			color: #ffffff
+			//text-align: center
+			
+			font-weight: bold
+			margin-top: 48px
+			margin-bottom: 7px
+			font-size: $studio_name_fs
+	.sidebar_bot
+		background-color: $background_gray
+		min-height: 50%
+		.section_number
+			position: relative
+			height: 50px
+			background-color: #36353a
+			margin-top: -50px
+			font-size: 144px
+			color: #ffffff
+			line-height: 0.76
+			font-weight: bold
+			#current_number
+				margin-left: -45px
+		.social_networks
+			position: absolute
+			bottom: 0
+			padding-bottom: 50px
+			width: 100%
+			display: flex
+			flex-direction: column
+			align-items: center
+			a
+				margin-top: 25px
+
+header
+	padding: 0 100px 0 165px
+	margin: 0 150px 0 150px
+	nav
+	ul
+		padding: 48px 0
+		padding-left: 0
+		margin: 0
+		display: flex
+		justify-content: space-between
+		list-style-type: none
+		li
+			a
+				text-decoration: none
+				font-size: 12px
+				color: $font_black
+				font-weight: 500
+				&:hover
+					text-decoration: none
+					color: $font_black
+.fixed_menu
+	opacity: 0
+	background-color: #ffffff
+	z-index: 1
+	position: fixed
+	padding: 0 250px 0 315px
+	width: 800px
+	nav
+	ul
+		padding: 48px 0
+		padding-left: 0
+		margin: 0
+		display: flex
+		justify-content: space-between
+		list-style-type: none
+		li
+			a
+				text-decoration: none
+				font-size: 12px
+				color: $font_black
+				font-weight: 500
+				&:hover
+					text-decoration: none
+					color: $font_black
+.fixed_menu_btn
+	width: 50px
+	height: 50px
+	position: fixed
+	border-radius: 50%
+	background-color: $background_gray
+	z-index: 20
+	svg
+		padding: 15px
+		height: 20px
+		fill: $background_black
+
+.container
+	padding: 0 165px
+	margin: 0 160px 0 150px
+	position: relative
+section
+	padding: 160px 0
+#About
+	padding-bottom: 0
+.section_text_block
+	padding-right: 20%
+	.s_name_block
+		position: relative
+		display: inline-block
+	.s_name
+		font-size: 12px
+		font-weight: 400
+		color: #ffffff
+		background-color: $background_red
+		line-height: 1
+		letter-spacing: 2px
+		padding: 0px 1px 0px 2px
+		display: inline-block
+	.s_h1
+		font-size: 36px
+		font-weight: 400
+		margin-top: 0
+		line-height: 1.33
+		font-style: normal
+		font-stretch: normal
+		letter-spacing: normal
+		color: #2c2e48
+		margin-left: -3px
+		position: relative
+
+	.s_info
+		font-size: 14px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.57
+		letter-spacing: 0.9px
+		color: $font_gray
+.s_name_bg
+	display: block
+	width: 105%
+	height: 100%
+	position: absolute
+	left: -3px
+	top: 0
+	z-index: 5
+	transform-origin: left
+	transform: scaleX(0)
+	background-color: black
+
+.bgN0,.bgN1,.bgN2,.bgN3
+	transform-origin: left
+	transform: scaleX(0)
+.words0,.words1,.words2,.words3
+	opacity: 0
+	
+.s_h1
+	font-size: 36px
+	font-weight: 500
+	margin-top: 0
+	line-height: 1.33
+	font-style: normal
+	font-stretch: normal
+	letter-spacing: normal
+	color: #2c2e48
+	margin-left: -3px
+	position: relative
+
+.circles
+	margin-top: 20px
+	position: relative
+	height: 380px
+
+	.circle_name
+		position: absolute
+		width: 100%
+		height: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		transition: color 0.5s
+		&:hover
+			color: $main_blue
+		span
+			margin-top: -10px
+			padding: 0 20px
+			text-align: center
+			font-size: 12px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: normal
+
+.rail_group-container
+	padding-top: 50px
+	z-index: -10
+	width: 100%
+	white-space: nowrap
+	font-size: 144px
+	font-weight: bold
+	font-style: normal
+	font-stretch: normal
+	line-height: normal
+	letter-spacing: normal
+	color: #f3f2f4
+	display: inline-flex
+	.rail_group_elements
+		display: inline-block
+		padding-right: 100px
+.rail_to_left
+.rail_to_right
+	margin-left: -1350px
+.circles_back
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+#test 
+	white-space: nowrap
+	width: 100%
+
+
+#Brief_circle
+	position: absolute
+	left: 0
+	top: 103px
+	&:hover
+		color: $main_blue
+#Product_Discovery_circle
+	position: absolute
+	top: 80px
+	left: 80px
+	
+#Concept_circle
+	position: absolute
+	top: 0
+	left: 267px
+
+#Moodboard_circle
+	position: absolute
+	left: 217px
+	top: 93px
+
+#Revisions_circle
+	position: absolute
+	left: 316px
+	top: 93px
+
+#Presenation_circle
+	position: absolute
+	top: 87px
+	left: 483px
+
+#Delivery_files_circle
+	position: absolute
+	top: 108px
+	left: 610px
+
+#c_n_revisions
+	span
+		padding: 10px 0 0 50px
+#c_n_moodboard
+	span
+		padding: 10px 60px  0 0
+#c_n_concept
+	span
+		padding:  0 0 60px 0
+
+#circles_sector1
+	width: 218px
+	height: 178px
+	border-style: none dashed dashed dashed
+	border-color: #e7e7e7
+	border-width: 1px
+	position: absolute
+	top: 155px
+	left: 2px
+.red_circle
+	width: 12px
+	height: 12px
+	border-radius: 50%
+	background-color: $main_red 
+.red_circle_w_e
+	width: 23px
+	height: 23px
+	position: absolute
+	.rc
+		border-radius: 50%
+		background-color: $main_red 
+		top: 0
+		left: 0
+		position: absolute
+	.rc1
+		opacity: 0.1
+		width: 23px
+		height: 23px
+	.rc2
+		opacity: 0.5
+		width: 15px
+		height: 15px
+		margin: 4px
+	.rc3
+		height: 9px
+		width: 9px
+		margin: 7px
+#r_c1
+	position: absolute
+	top: -6px
+	left: -6px
+	z-index: 5
+#r_c2
+	position: absolute
+	top: -6px
+	right:  -6px
+	z-index: 5
+#r_c3
+	position: absolute
+	bottom: -12px
+	left: 101px
+	z-index: 5
+.circles_s1_info
+	position: absolute
+	width: 335px
+	top: 355px
+	left: 115px
+.c_info_title
+	font-size: 12px
+	font-weight: 500
+	color: $font_black
+.c_info_p
+	font-size: 14px
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.57
+	letter-spacing: 0.9px
+#circles_sector2
+	width: 2px
+	height: 176px
+	border-style: none none none dashed
+	border-color: #e7e7e7
+	border-width: 1px
+	position: absolute
+	top: 155px
+	left: 610px
+#r_c4
+	position: absolute
+	top: -6px
+	left: -6px
+	z-index: 5
+#r_c5
+	position: absolute
+	bottom:  -12px
+	left: -12px
+	z-index: 5
+.circles_s2_info
+	position: absolute
+	top: 355px
+	left: 610px
+
+footer
+	background-color: $background_black
+	.email_link
+		background-color: $background_gray
+		min-height: 160px
+		display: flex
+		align-items: center
+		span
+			font-size: 24px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: 1.5
+			letter-spacing: 1px
+			a
+				text-decoration: none
+				color: $main_blue
+				&:hover
+					color: $main_blue
+	.studio_name
+			color: #ffffff
+			font-weight: bold
+			font-size: $studio_name_fs
+	.flex_s_b
+		display: flex
+		justify-content: space-between
+		width: 65%
+		align-items: center
+		padding-right: 65px
+	.social_networks
+		display: flex		
+		justify-content: flex-end
+		align-items: center
+		a
+			margin-left: 25px
+	.other_links
+		margin-left: 150px
+		padding-left: 165px
+		display: flex
+		min-height: 100px
+		align-content: center
+		.get_in
+			width: 35%
+			display: flex
+			align-items: center
+			background-color: $main_blue
+			a
+				padding-left: 48px
+				font-size: 12px
+				font-weight: 500
+				font-style: normal
+				font-stretch: normal
+				line-height: 3
+				letter-spacing: 0.5px
+				color: #ffffff
+				text-decoration: none
+				display: flex
+				align-items: center
+
+			svg
+				margin-left: 31px
+	.other_contacts
+		border: solid 1px $main_blue
+		padding: 36px 0
+		.col_title
+			font-size: 12px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: 0.5px
+			color: #ffffff
+		.flex_cols
+			display: flex
+			justify-content: space-between
+			align-items: flex-start
+			width: 75%
+			ul
+				padding: 0
+				margin-top: 11px
+			li
+				text-decoration: none
+				list-style-type: none
+			a
+				text-decoration: none
+				font-size: 14px
+				font-weight: normal
+				font-style: normal
+				font-stretch: normal
+				line-height: 1.57
+				letter-spacing: 0.9px
+				color: $font_gray
+				&:hover
+					text-decoration: none
+					color: $font_gray
+
+	.footer_bot
+		min-height: 100px
+		background-color: #232328
+		margin-left: 150px
+		padding-left: 64px
+		display: flex
+		align-items: center
+		span
+			padding-right: 35px
+			opacity: 0.2
+			font-size: 12px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: 0.5px
+			color: #ffffff
+.slider_block
+	margin: 0 140px 0 150px
+	padding: 0 165px
+.slider
+//	width: 100%
+.slider_element
+	position: relative
+	.slider_el_bg
+		position: absolute
+		width: 100%
+		height: 100%
+		top: -8px
+		background-color: #000000	
+		transform-origin: left
+		transform: scaleX(0)
+	.slider_el_img
+		opacity: 0
+
+.slider_nav
+	padding-right: 0px
+	margin:  20px 20px 20px 0
+	padding-bottom: 15px
+	border-bottom:  solid 1px $font_second_gray
+	display: flex
+	justify-content: space-between
+
+	.slider_info
+		display: flex
+		align-items: flex-end
+		span
+			font-size: 10px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: normal
+			letter-spacing: 1.7px
+		#current_slide
+			color: $main_black
+		#max_num_slide
+			color: #d7d7d7
+	.progress
+		margin: 0 15px 3px 15px
+		display: block
+		width: 50px
+		height: 2px
+		border-radius: 0px
+		overflow: hidden
+		background-color: $font_second_gray
+		background-image: linear-gradient(to right, $main_blue, $main_blue)
+		background-repeat: no-repeat
+		background-size: 0 100% 
+		transition: background-size 1s
+.slick-slide
+	padding-right: 20px
+	&:first-child
+		//padding-left: 0px
+
+	div
+		padding-bottom: 8px
+.slider_control
+	display: flex
+.slider_btn
+	background-color: $font_second_gray
+	border-radius: 50%
+	width: 19px
+	display: flex
+	height: 19px
+	align-items: center
+	justify-content: center
+	opacity: 0.2
+	fill: $font_gray
+	margin-left: 20px
+	&:hover
+		opacity: 1
+.back_home_header
+	padding: 35px 0
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.get_in_touch_title
+		font-size: 36px
+		font-weight: normal
+		font-style: normal
+		font-stretch: normal
+		line-height: 1.33
+		letter-spacing: normal
+		color: #2c2e48
+	.back_home_link
+		display: flex
+		align-items: center
+		a
+			text-decoration: none
+			font-size: 12px
+			font-weight: 500
+			font-style: normal
+			font-stretch: normal
+			line-height: 3
+			letter-spacing: 0.5px
+			color: #969696
+	.back_home_btn
+		margin-left: 20px
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		background-color: $background_gray
+		svg
+			width: 18px
+			padding: 16.5px
+			fill: $background_black	
+.tanks_block
+	width: 500px
+	font-size: 36px
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.33
+	letter-spacing: normal
+	color: #2c2e48
+.blue_btn
+	font-weight: 600
+	line-height: 1.57
+	letter-spacing: 1px
+	border-radius: 27.5px
+	background-color: $main_blue
+	display: inline-block
+	padding: 18px 55px
+	color: #ffffff
+	margin-top: 45px
+	text-decoration: none
+.s_TE
+	padding: 40px 0 400px 0
+.my_form
+	padding: 0px 130px 0px 165px
+	margin: 0px 150px
+	position: relative
+.my_input
+	border: none
+	padding: 0 20px
+	height: 60px
+	border-radius: 2px
+	background-color: $background_gray
+	width: 100%
+	font-family: Montserrat
+	font-size: 14px
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.57
+	letter-spacing: 0.9px
+
+.form-row 
+	margin-bottom: 30px
+	padding: 4px 0
+	position: relative
+.about_solutions
+	display: flex
+	justify-content: flex-start
+	flex-wrap: wrap
+
+	.solution_el
+		padding-top: 60px
+
+		display: flex	
+		padding-right: 85px
+		.solution_el_info
+			.el_title
+				font-size: 12px
+				font-weight: 500
+				font-style: normal
+				font-stretch: normal
+				line-height: normal
+				letter-spacing: 1px
+				text-align: center
+				color: #382e2e
+				text-transform: uppercase
+			ul
+				list-style-type: none
+				padding: 9px 0 0 0 
+				margin: 0
+				li
+					font-family: OpenSans
+					font-size: 11px
+					font-weight: normal
+					font-style: normal
+					font-stretch: normal
+					line-height: normal
+					letter-spacing: normal
+					color: #4a4a4a
+.about_svg_cont
+	position: relative
+	padding-right: 12px
+	.color_svg
+		position: absolute
+		top: 0
+		left: 0
+		opacity: 0
+		transition: opacity 1s
+		&:hover
+			opacity: 1	
+
+.label-helper 
+	position: absolute
+	opacity: 0
+	transition: .2s bottom, .2s opacity
+	bottom: 0
+	left: 0
+	z-index: 1
+	font-size: 12px
+	font-weight: 400
+	color: #ffffff
+	background-color: $background_red
+	line-height: 1
+	letter-spacing: 0.5px
+
+	
+.my_input:focus + .label-helper
+	bottom: 110%
+	font-size: 12px
+	padding: 0px 3px 0px 0px
+	line-height: 1
+	opacity: 1
+.my_input:invalid + .label-helper 
+	bottom: 110%
+	font-size: 12px
+	padding: 0px 3px 0px 0px
+	line-height: 1
+	opacity: 1
+.pos_rel
+	position: relative
+.get_in_touch_btn
+	top: -15px
+	position: absolute
+	right: -80px
+	height: 50px
+	width: 50px
+	background-color: $main_blue
+	border-radius: 50%
+	display: flex
+	justify-content: center
+	align-items: center
+	z-index: 20
+
+
+.get_in_touch_title
+	font-size: 36px
+	font-weight: normal
+	font-style: normal
+	font-stretch: normal
+	line-height: 1.33
+	letter-spacing: normal
+	color: #2c2e48
+
+#arrow_down
+	position: absolute
+	top: 70px
+	right: 50px
+
+//mobile element
+.mob_menu_footer
+	display: none
+.mob_header
+	display: none
+.mob_section_number
+	display: none
+.mob_get_in_touch_title
+	display: none
+
+
+
+
+ 
+
+@import "media" // Always at the end
+

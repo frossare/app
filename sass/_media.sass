@@ -1,0 +1,280 @@
+@import "vars"
+
+
+@media (max-width: 1120px)
+	.container
+		padding: 0 105px
+		margin: 0 160px 0 150px
+	.slider_block
+		padding: 0 105px
+
+@media (max-width: 992px)
+	.sidebar
+		display: none
+	.fixed_menu
+		display: none
+	.rail_group-container
+		display: none
+	#arrow_down
+		display: none
+	.container 
+		padding: 0 22px
+		margin: 0
+		.section_text_block
+			padding: 0
+	.slider_block
+		padding: 0 2px 0 22px
+		margin: 0
+		width: auto
+	section
+		padding: 110px 0 0px 0
+	.s_TE
+		padding: 110px 0 80px 0
+	.email_link
+		padding: 20px 0
+	header
+		margin: 0
+		padding: 0
+	.back_home_header
+		display: none
+	footer
+		.other_contacts
+			display: none
+		.other_links
+			padding: 0 
+			margin: 0 
+			flex-direction: column
+			.flex_s_b
+				padding: 0 22px
+				width: auto
+				min-height: 100px
+			.get_in
+				width: auto
+				min-height: 100px
+				padding: 0 22px
+				a
+					padding: 0
+					svg
+						position: absolute
+						right: 22px
+		.footer_bot
+			padding: 0 22px
+			margin: 0
+			span
+				padding-right: 15px
+				&:last-child
+					padding-right: 0
+	.mob_header
+		z-index: 100
+		position: fixed
+		width: 100vw
+		height: 60px
+		background-color: $background_black
+		display: flex
+		justify-content: space-between
+		.studio_name
+			padding: 12px 0 12px 16px
+			color: #ffffff
+			font-weight: bold
+			font-size: $studio_name_fs
+			svg
+				margin-bottom: -12px
+		.mob_menu_btn
+			width: 60px
+			background-color: $background_gray
+			svg
+				padding: 15px		
+				fill: $background_black
+		.mob_close_btn
+			width: 60px
+			background-color: $background_gray
+			svg
+				padding: 20px		
+				fill: $background_black	
+	.mob_menu
+		position: fixed
+		//-webkit-backface-visibility: hidden
+		height: 100%
+		width: 100%
+		
+		z-index: 10
+		transition: top 2s
+		border-top: solid 1px #37373f
+		margin: 60px 0 0 0
+		top: -700px
+		left: -60px
+		.mob_menu_cont
+			overflow-y: scroll
+			height: 100%
+			margin-left: 60px
+		nav
+			background-color: $background_black	
+			padding: 36px 7px 36px 16px
+			ul
+				display: flex
+				flex-direction: column
+				padding: 0
+				li
+					a
+						font-size: 28px
+						font-weight: normal
+						font-style: normal
+						font-stretch: normal
+						line-height: 2.43
+						letter-spacing: normal
+						color: #ffffff
+						text-decoration: none
+		.mob_menu_footer
+			display: block
+			.social_networks
+				background-color: $background_black	
+				min-height: 100px
+				display: flex
+				align-items: center
+				padding: 0 7px 0 16px
+				a
+					padding-right: 22px
+			.get_in
+				min-height: 100px
+				display: flex
+				align-items: center
+				padding: 0 7px 0px 16px
+				position: relative
+				background-color: $main_blue
+				margin-bottom: 50px
+				a
+					display: flex
+					align-items: center
+					font-size: 12px
+					font-weight: 500
+					font-style: normal
+					font-stretch: normal
+					line-height: 3
+					letter-spacing: 0.5px
+					color: #ffffff
+					text-decoration: none
+					svg
+						position: absolute
+						right: 22px
+	.mob_dis_none
+		display: none
+	.my_form
+		margin: 60px 62px 60px 22px
+		padding: 0
+	section
+		position: relative
+	.mob_section_number
+		position: absolute
+		font-size: 144px
+		color: $background_gray
+		line-height: 0.76
+		font-weight: bold
+		display: inline-block
+		top: 160px
+		left: -45px
+		z-index: -1
+	.tanks_block
+		width: 100%
+	.fixed_menu_btn
+		display: none
+	.circles_container
+		display: flex
+		justify-content: center
+	.circles
+		position: relative
+		width: 305px
+		height: 720px
+
+	#Brief_circle
+		position: absolute
+		top: 0
+		left: 103px
+	
+
+	#Product_Discovery_circle
+		position: absolute
+		left: 80px
+		top: 80px
+
+	#User_flow_circle
+		position: absolute
+		left: 80px
+		top: 187px
+		
+	#Concept_circle
+		position: absolute
+		left: 0
+		top: 319px
+
+	#Moodboard_circle
+		position: absolute
+		top: 220px
+		left: 60px
+
+	#Revisions_circle
+		position: absolute
+		top: 319px
+		left: 120px
+
+	#Presenation_circle
+		position: absolute
+		left: 86px
+		top: 486px
+
+	#Delivery_files_circle
+		position: absolute
+		left: 108px
+		top: 613px
+
+	#circles_sector1
+		height: 218px
+		width: 100px
+		border-style:  dashed none dashed dashed
+		top: 3px
+		left: 50px
+	#r_c1
+		top: 212px
+		left: 94px
+	#r_c3
+		bottom: 98px
+		left: -12px
+	.circles_s1_info
+		.c_info_p
+			display: none
+		transform: rotate(-90deg)	
+		left: -145px
+		top: 0
+	#circles_sector2
+		width: 100px
+		height: 1px
+		border-style:  dashed none none none
+		top: 613px
+		left: 50px
+	#r_c4
+		top: -6px
+		left: 94px
+	#r_c5
+		bottom:  -10px
+		left: -12px
+	.circles_s2_info
+		transform: rotate(-90deg)	
+		left: -20px
+		top: 610px
+	
+	#c_n_revisions
+		span
+			padding: 30px 0 0 50px
+	#c_n_moodboard
+		span
+			padding: 0 0 60px 0
+	#c_n_concept
+		span
+			padding: 30px 50px 0 0 
+
+	.mob_get_in_touch_title
+		display: block
+		padding: 0 22px
+
+@media (max-width: 330px)
+	.circles
+		margin-left: -15px
