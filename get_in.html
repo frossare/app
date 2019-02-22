@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>OptimizedHTML 4</title>
+	<title>Get in</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -233,40 +233,48 @@
 		<div class="get_in_touch_title mob_get_in_touch_title">Get in touch</div>
 
 		<div class="my_form">
-			<form action="/action_page.php">
+			<form action="">
 
-				<div>
+				<div class="input_container">
 					<div class="form-row">
-						<input type="text" class="my_input" id="input" placeholder="Name*" />
-						<label class="label-helper" for="input">Name*</label>
-						
+						<input type="text" class="my_input" id="input1" placeholder="Name*" onfocus="input_name(this)" />
+						<label id="name_l" class="label-helper" >Name*</label>
+						<label class="label-invalid in1"> Please fill out this field</label>
 
 					</div>
 					<div class="form-row">
-						<input type="text" class="my_input" id="input1" placeholder="Company name*" />
-						<label class="label-helper" for="input1">Company name*</label>
+						<input type="text" class="my_input" id="input2" placeholder="Company name*" onfocus="input_com_name(this)" />
+						<label id="com_name_l" class="label-helper" for="input1">Company name*</label>
+						<label class="label-invalid in2"> Please fill out this field</label>
+
 					</div>
 
+				
+
+				<div class="form-row">
+					<input type="email" class="my_input" id="input3" placeholder="Email*"  onfocus="input_email(this)"/>
+					<span id="email_l" class="label-helper" >Email*</span>
+					<label for="input2" class="label-invalid in3"> Please fill out this field</label>
+
 				</div>
 
 				<div class="form-row">
-					<input type="text" class="my_input" id="input2" placeholder="Email*" />
-					<label class="label-helper" for="input2">Email*</label>
+					<input type="text" class="my_input" id="input4" placeholder="Phone number*" onfocus="input_phone(this)"/>
+					<label id="phone_l" class="label-helper" for="input3">Phone number*</label>
+					<label class="label-invalid in4"> Please fill out this field</label>
+
+				</div>
+			</div>
+				<div class="form-row-textarea ">
+
+
+					<textarea type="textarea" class="my_input" id="input5" placeholder="Message*" onfocus="input_message(this)"></textarea>
+					<label id="message_l" class="label-helper" for="input4">Message*</label>
+					<label class="label-invalid in5"> Please fill out this field</label>
+
 				</div>
 
-				<div class="form-row">
-					<input type="text" class="my_input" id="input3" placeholder="Phone number*" />
-					<label class="label-helper" for="input3">Phone number*</label>
-				</div>
-
-				<div class="form-row">
-
-
-					<input type="textarea" class="my_input" id="input4" placeholder="Message*" />
-					<label class="label-helper" for="input4">Message*</label>
-				</div>
-
-				<a href="./thanks.html" class="blue_btn">Send a message</a>
+				<div class="blue_btn">Send a message</div>
 			</form>
 		</div>
 	</section>
@@ -428,6 +436,9 @@
 
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+
+	<script src="js/formValidation.js"></script>
 
 
 

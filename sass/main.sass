@@ -256,6 +256,7 @@ section
 			letter-spacing: normal
 
 .rail_group-container
+	margin-left: -1400px
 	padding-top: 50px
 	z-index: -10
 	width: 100%
@@ -576,16 +577,16 @@ footer
 		#max_num_slide
 			color: #d7d7d7
 	.progress
-		margin: 0 15px 3px 15px
+		margin: 0 15px 5px 15px
 		display: block
 		width: 50px
-		height: 2px
+		height: 1px
 		border-radius: 0px
 		overflow: hidden
 		background-color: $font_second_gray
 		background-image: linear-gradient(to right, $main_blue, $main_blue)
 		background-repeat: no-repeat
-		background-size: 0 100% 
+		background-size: 10% 100% 
 		transition: background-size 1s
 .slick-slide
 	padding-right: 20px
@@ -654,6 +655,7 @@ footer
 	letter-spacing: normal
 	color: #2c2e48
 .blue_btn
+	cursor: pointer
 	font-weight: 600
 	line-height: 1.57
 	letter-spacing: 1px
@@ -684,11 +686,23 @@ footer
 	font-stretch: normal
 	line-height: 1.57
 	letter-spacing: 0.9px
-
+.input_container
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
 .form-row 
-	margin-bottom: 30px
+	margin-bottom: 50px
 	padding: 4px 0
 	position: relative
+	width: 43%
+.form-row-textarea
+	margin-bottom: 50px
+	padding: 4px 0
+	position: relative
+	width: 100%
+	height: 150px
+	textarea
+		height: 100%
 .about_solutions
 	display: flex
 	justify-content: flex-start
@@ -738,8 +752,8 @@ footer
 .label-helper 
 	position: absolute
 	opacity: 0
-	transition: .2s bottom, .2s opacity
-	bottom: 0
+	//transition: .2s bottom, .2s opacity
+	bottom: 110%
 	left: 0
 	z-index: 1
 	font-size: 12px
@@ -749,19 +763,23 @@ footer
 	line-height: 1
 	letter-spacing: 0.5px
 
-	
-.my_input:focus + .label-helper
+.label-invalid
+	position: absolute
+	opacity: 0
+	//transition: .2s bottom, .2s opacity
 	bottom: 110%
+	right:  -35px
+	z-index: 1
 	font-size: 12px
-	padding: 0px 3px 0px 0px
+	font-weight: 500
+	font-style: normal
+	font-stretch: normal
 	line-height: 1
-	opacity: 1
-.my_input:invalid + .label-helper 
-	bottom: 110%
-	font-size: 12px
-	padding: 0px 3px 0px 0px
-	line-height: 1
-	opacity: 1
+	letter-spacing: normal
+	color: $background_red 
+
+
+
 .pos_rel
 	position: relative
 .get_in_touch_btn
@@ -775,7 +793,7 @@ footer
 	display: flex
 	justify-content: center
 	align-items: center
-	z-index: 20
+	z-index: 9
 
 
 .get_in_touch_title
@@ -802,10 +820,32 @@ footer
 .mob_get_in_touch_title
 	display: none
 
-
-
-
- 
+.nav_links
+	z-index: 1
+.line_add
+	position: relative
+	&:after
+		display: block
+		content: ''
+		width: 120%
+		height: 2px
+		background: $main_red
+		position: absolute
+		bottom: 5px
+		left: -10%
+		z-index: -1
+.line_add_mob
+	position: relative
+	&:after
+		display: block
+		content: ''
+		width: 110%
+		height: 2px
+		background: $main_red
+		position: absolute
+		bottom: 12px
+		left: -5%
+		z-index: -1
 
 @import "media" // Always at the end
 
