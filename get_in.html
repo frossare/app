@@ -30,15 +30,11 @@
 
 	<div id="preloader"></div>
 
-
-
-	<!-- Custom HTML -->
 	<div class="sidebar">
 		<div class="sidebar_top">
 			<div class="studio_name">
 				Blue <span class="blue_font_color">Peach</span>
 			</div>
-
 			<svg width="40px" height="46px" viewBox="0 0 80 92" version="1.1" xmlns="http://www.w3.org/2000/svg"
 				xmlns:xlink="http://www.w3.org/1999/xlink">
 				<!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
@@ -72,7 +68,6 @@
 					</g>
 				</g>
 			</svg>
-
 		</div>
 		<div class="sidebar_bot">
 			<div class="section_number">
@@ -81,7 +76,7 @@
 				</div>
 			</div>
 			<div class="social_networks">
-				<a href="">
+				<a href="https://dribbble.com/peachstudio">
 					<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
 						xmlns:xlink="http://www.w3.org/1999/xlink">
 						<!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
@@ -101,7 +96,7 @@
 						</g>
 					</svg>
 				</a>
-				<a href="">
+				<a href="https://www.instagram.com/pchdsgn/">
 					<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
 						xmlns:xlink="http://www.w3.org/1999/xlink">
 						<!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
@@ -125,7 +120,7 @@
 						</g>
 					</svg>
 				</a>
-				<a href="">
+				<a href="https://www.behance.net/pchdsgn">
 					<svg width="16px" height="11px" viewBox="0 0 16 11" version="1.1" xmlns="http://www.w3.org/2000/svg"
 						xmlns:xlink="http://www.w3.org/1999/xlink">
 						<!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
@@ -153,15 +148,11 @@
 				</a>
 			</div>
 		</div>
-		<div class="test"></div>
 	</div>
-
-
 
 	<header>
 		<div class="mob_header">
 			<div class="studio_name">
-
 				<svg height="36px" viewBox="0 0 80 92" version="1.1" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink">
 					<!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
@@ -195,7 +186,6 @@
 						</g>
 					</g>
 				</svg>
-
 				<span> Blue <span class="blue_font_color">Peach</span></span>
 			</div>
 			<div class="mob_close_btn">
@@ -205,17 +195,13 @@
 						<line x1="1" y1="1" x2="15" y2="15" stroke="black" stroke-width="2" />
 					</svg>
 				</a>
-
-
 			</div>
 		</div>
 		<div class="back_home_header">
-
 			<div class="get_in_touch_title">Get in touch</div>
 			<div class="back_home_link">
 				<a href="./">Back to home
 					<div class="back_home_btn">
-
 						<svg height="30px" viewPort="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
 							<line x1="1" y1="15" x2="15" y2="1" stroke="black" stroke-width="2" />
 							<line x1="1" y1="1" x2="15" y2="15" stroke="black" stroke-width="2" />
@@ -223,64 +209,48 @@
 				</a>
 			</div>
 		</div>
-
 		</div>
-
 	</header>
-
 
 	<section class="s_TE">
 		<div class="get_in_touch_title mob_get_in_touch_title">Get in touch</div>
-
 		<div class="my_form">
 			<form action="">
-
 				<div class="input_container">
 					<div class="form-row">
-						<input type="text" class="my_input" id="input1" placeholder="Name*" onfocus="input_name(this)" />
-						<label id="name_l" class="label-helper" >Name*</label>
+						<input pattern="[A-Za-z].{2,}" type="text" class="my_input" id="input1" placeholder="Name*"
+							onfocus="input_name(this)" />
+						<label id="name_l" class="label-helper">Name*</label>
 						<label class="label-invalid in1"> Please fill out this field</label>
-
 					</div>
 					<div class="form-row">
-						<input type="text" class="my_input" id="input2" placeholder="Company name*" onfocus="input_com_name(this)" />
+						<input pattern="[A-Za-z].{2,}" type="text" class="my_input" id="input2" placeholder="Company name*"
+							onfocus="input_com_name(this)" />
 						<label id="com_name_l" class="label-helper" for="input1">Company name*</label>
 						<label class="label-invalid in2"> Please fill out this field</label>
-
 					</div>
-
-				
-
-				<div class="form-row">
-					<input type="email" class="my_input" id="input3" placeholder="Email*"  onfocus="input_email(this)"/>
-					<span id="email_l" class="label-helper" >Email*</span>
-					<label for="input2" class="label-invalid in3"> Please fill out this field</label>
-
+					<div class="form-row">
+						<input type="email" class="my_input" id="input3" placeholder="Email*" onfocus="input_email(this)" />
+						<span id="email_l" class="label-helper">Email*</span>
+						<label for="input2" class="label-invalid in3"> Please fill out this field</label>
+					</div>
+					<div class="form-row">
+						<input type="text" pattern=".{3,}" onkeypress='return event.charCode >= 48 && event.charCode <= 57'
+							class="my_input" id="input4" placeholder="Phone number*" onfocus="input_phone(this)" />
+						<label id="phone_l" class="label-helper" for="input3">Phone number*</label>
+						<label class="label-invalid in4"> Please fill out this field</label>
+					</div>
 				</div>
-
-				<div class="form-row">
-					<input type="text" class="my_input" id="input4" placeholder="Phone number*" onfocus="input_phone(this)"/>
-					<label id="phone_l" class="label-helper" for="input3">Phone number*</label>
-					<label class="label-invalid in4"> Please fill out this field</label>
-
-				</div>
-			</div>
 				<div class="form-row-textarea ">
-
-
-					<textarea type="textarea" class="my_input" id="input5" placeholder="Message*" onfocus="input_message(this)"></textarea>
+					<textarea minlength="5" type="textarea" class="my_input" id="input5" placeholder="Message*"
+						onfocus="input_message(this)"></textarea>
 					<label id="message_l" class="label-helper" for="input4">Message*</label>
 					<label class="label-invalid in5"> Please fill out this field</label>
-
 				</div>
-
 				<div class="blue_btn">Send a message</div>
 			</form>
 		</div>
 	</section>
-
-
-
 
 	<footer id="Contacts">
 		<div class="email_link">
@@ -291,15 +261,13 @@
 				</div>
 			</div>
 		</div>
-
-
 		<div class="other_links">
 			<div class="flex_s_b">
 				<div class="studio_name">
 					Blue <span class="blue_font_color">Peach</span>
 				</div>
 				<div class="social_networks">
-					<a href="">
+					<a href="https://dribbble.com/peachstudio">
 						<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink">
 							<!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
@@ -319,7 +287,7 @@
 							</g>
 						</svg>
 					</a>
-					<a href="">
+					<a href="https://www.instagram.com/pchdsgn/">
 						<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink">
 							<!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
@@ -343,7 +311,7 @@
 							</g>
 						</svg>
 					</a>
-					<a href="">
+					<a href="https://www.behance.net/pchdsgn">
 						<svg width="16px" height="11px" viewBox="0 0 16 11" version="1.1" xmlns="http://www.w3.org/2000/svg"
 							xmlns:xlink="http://www.w3.org/1999/xlink">
 							<!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
@@ -373,7 +341,6 @@
 			</div>
 			<div class="get_in">
 				<a href=""> Get in touch
-
 					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 						x="0px" y="0px" viewBox="0 0 370.88 370.88" height="21.5px" fill="#ffffff"
 						style="enable-background:new 0 0 370.88 370.88;" xml:space="preserve">
@@ -410,9 +377,9 @@
 						<ul>
 							<li><a href="">Facebook</a></li>
 							<li><a href="">Twitter</a></li>
-							<li><a href="">Instagram</a></li>
-							<li><a href="">Behance</a></li>
-							<li><a href="">Dribbble</a></li>
+							<li><a href="https://www.instagram.com/pchdsgn/">Instagram</a></li>
+							<li><a href="https://www.behance.net/pchdsgn">Behance</a></li>
+							<li><a href="https://dribbble.com/peachstudio">Dribbble</a></li>
 							<li><a href="">99design</a></li>
 							<li><a href="">Upwork</a></li>
 						</ul>
@@ -426,12 +393,9 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="footer_bot">
 			<span>Copyright 2019 Blue Peach.</span> <span>Legal Notice</span> <span>Privacy Policy</span>
 		</div>
-
-
 	</footer>
 
 
@@ -439,8 +403,6 @@
 	<script src="libs/jquery/dist/jquery.min.js"></script>
 
 	<script src="js/formValidation.js"></script>
-
-
 
 
 </body>

@@ -60,7 +60,7 @@ h1 ::before
 	position: fixed
 	display: flex
 	flex-direction: column
-	z-index: 5
+	z-index: 10
 	.sidebar_top
 		background-color: $background_black
 		min-height: 50%
@@ -70,8 +70,6 @@ h1 ::before
 	
 		.studio_name
 			color: #ffffff
-			//text-align: center
-			
 			font-weight: bold
 			margin-top: 48px
 			margin-bottom: 7px
@@ -102,9 +100,12 @@ h1 ::before
 				margin-top: 25px
 
 header
-	padding: 0 100px 0 165px
-	margin: 0 150px 0 150px
 	nav
+		padding: 0 250px 0 315px
+		background-color: #ffffff
+		position: fixed
+		width: 60%
+		z-index: 9
 	ul
 		padding: 48px 0
 		padding-left: 0
@@ -158,13 +159,22 @@ header
 		fill: $background_black
 
 .container
-	padding: 0 165px
+	padding: 0px 165px
 	margin: 0 160px 0 150px
 	position: relative
+	max-width: 800px
 section
-	padding: 160px 0
-#About
-	padding-bottom: 0
+	padding: 80px 0 0px 0
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+#hello
+	padding: 0px 0 20px 0
+#Projects
+	padding: 85px 0 80px 0
+#Design_Process
+	padding: 85px 0 80px 0
+
 .section_text_block
 	padding-right: 20%
 	.s_name_block
@@ -190,7 +200,6 @@ section
 		color: #2c2e48
 		margin-left: -3px
 		position: relative
-
 	.s_info
 		font-size: 14px
 		font-weight: normal
@@ -232,8 +241,7 @@ section
 .circles
 	margin-top: 20px
 	position: relative
-	height: 380px
-
+	height: 520px
 	.circle_name
 		position: absolute
 		width: 100%
@@ -256,7 +264,7 @@ section
 			letter-spacing: normal
 
 .rail_group-container
-	margin-left: -1400px
+	margin-left: -2400px
 	padding-top: 50px
 	z-index: -10
 	width: 100%
@@ -283,7 +291,6 @@ section
 #test 
 	white-space: nowrap
 	width: 100%
-
 
 #Brief_circle
 	position: absolute
@@ -424,6 +431,7 @@ section
 	left: 610px
 
 footer
+	margin-top: -50px
 	background-color: $background_black
 	.email_link
 		background-color: $background_gray
@@ -481,11 +489,11 @@ footer
 				text-decoration: none
 				display: flex
 				align-items: center
-
 			svg
 				margin-left: 31px
 	.other_contacts
-		border: solid 1px $main_blue
+		border-top: solid 1px $background_gray
+		border-bottom: solid 1px $background_gray
 		padding: 36px 0
 		.col_title
 			font-size: 12px
@@ -520,7 +528,8 @@ footer
 					color: $font_gray
 
 	.footer_bot
-		min-height: 100px
+		min-height: 50px
+		padding: 25px 0
 		background-color: #232328
 		margin-left: 150px
 		padding-left: 64px
@@ -539,6 +548,8 @@ footer
 .slider_block
 	margin: 0 140px 0 150px
 	padding: 0 165px
+	max-width: 800px
+
 .slider
 //	width: 100%
 .slider_element
@@ -611,7 +622,9 @@ footer
 	&:hover
 		opacity: 1
 .back_home_header
-	padding: 35px 0
+	//padding: 35px 0
+	padding: 35px 75px 35px 165px
+	margin: 0 160px 0 150px
 	display: flex
 	justify-content: space-between
 	align-items: center
@@ -629,7 +642,7 @@ footer
 		a
 			text-decoration: none
 			font-size: 12px
-			font-weight: 500
+			font-weight: 400
 			font-style: normal
 			font-stretch: normal
 			line-height: 3
@@ -656,7 +669,7 @@ footer
 	color: #2c2e48
 .blue_btn
 	cursor: pointer
-	font-weight: 600
+	font-weight: 400
 	line-height: 1.57
 	letter-spacing: 1px
 	border-radius: 27.5px
@@ -664,10 +677,14 @@ footer
 	display: inline-block
 	padding: 18px 55px
 	color: #ffffff
-	margin-top: 45px
+	//margin-top: 45px
 	text-decoration: none
+.try_again
+	margin: 45px 0px 20px 0px
 .s_TE
-	padding: 40px 0 400px 0
+	padding: 40px 0 100px 0
+	min-height: 75vh
+	align-items: flex-start
 .my_form
 	padding: 0px 130px 0px 165px
 	margin: 0px 150px
@@ -686,6 +703,9 @@ footer
 	font-stretch: normal
 	line-height: 1.57
 	letter-spacing: 0.9px
+#input5
+	padding-top: 10px
+
 .input_container
 	display: flex
 	flex-wrap: wrap
@@ -707,12 +727,21 @@ footer
 	display: flex
 	justify-content: flex-start
 	flex-wrap: wrap
-
 	.solution_el
 		padding-top: 60px
-
+		position: relative
 		display: flex	
 		padding-right: 85px
+		&:before
+			display: block
+			content: '.'
+			position: absolute
+			top: 55px
+			left: -40px
+			font-weight: 500
+			font-size: 36px
+		&:first-child:before
+			display: none
 		.solution_el_info
 			.el_title
 				font-size: 12px
@@ -729,7 +758,6 @@ footer
 				padding: 9px 0 0 0 
 				margin: 0
 				li
-					font-family: OpenSans
 					font-size: 11px
 					font-weight: normal
 					font-style: normal
@@ -752,7 +780,6 @@ footer
 .label-helper 
 	position: absolute
 	opacity: 0
-	//transition: .2s bottom, .2s opacity
 	bottom: 110%
 	left: 0
 	z-index: 1
@@ -766,7 +793,6 @@ footer
 .label-invalid
 	position: absolute
 	opacity: 0
-	//transition: .2s bottom, .2s opacity
 	bottom: 110%
 	right:  -35px
 	z-index: 1
@@ -777,8 +803,6 @@ footer
 	line-height: 1
 	letter-spacing: normal
 	color: $background_red 
-
-
 
 .pos_rel
 	position: relative
@@ -795,7 +819,6 @@ footer
 	align-items: center
 	z-index: 9
 
-
 .get_in_touch_title
 	font-size: 36px
 	font-weight: normal
@@ -810,7 +833,7 @@ footer
 	top: 70px
 	right: 50px
 
-//mobile element
+//mobile elements
 .mob_menu_footer
 	display: none
 .mob_header
@@ -831,21 +854,10 @@ footer
 		height: 2px
 		background: $main_red
 		position: absolute
-		bottom: 5px
+		bottom: 4px
 		left: -10%
 		z-index: -1
-.line_add_mob
-	position: relative
-	&:after
-		display: block
-		content: ''
-		width: 110%
-		height: 2px
-		background: $main_red
-		position: absolute
-		bottom: 12px
-		left: -5%
-		z-index: -1
+
 
 @import "media" // Always at the end
 
